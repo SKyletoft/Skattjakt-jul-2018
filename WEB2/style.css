@@ -1,0 +1,9 @@
+.rules {
+	width: 500px;
+}
+body {
+	background: lightgray;
+}
+canvas {
+	background: white;
+}

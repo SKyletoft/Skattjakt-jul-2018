@@ -1,0 +1,6 @@
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csprojAssemblyReference.cache
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

@@ -1,0 +1,7 @@
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\bin\Debug\Random Reader.exe.config
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\bin\Debug\Random Reader.exe
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\bin\Debug\Random Reader.pdb
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\obj\Debug\Random Reader.csprojAssemblyReference.cache
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\obj\Debug\Random Reader.csproj.CoreCompileInputs.cache
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\obj\Debug\Random Reader.exe
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\obj\Debug\Random Reader.pdb

@@ -1,0 +1,7 @@
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\obj\Debug\Random Writer.csproj.CoreCompileInputs.cache
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\bin\Debug\Random Writer.exe.config
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\bin\Debug\Random Writer.exe
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\bin\Debug\Random Writer.pdb
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\obj\Debug\Random Writer.exe
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\obj\Debug\Random Writer.pdb
+C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\obj\Debug\Random Writer.csprojAssemblyReference.cache
