@@ -1,3 +1,6 @@
+console.log("Hackerman!\nIf you got this far, you probably know how to look at the code, so I'll just tell you. There's a variable called auto. If you set it to true, the game will play itself for you. Might be helpful without a real mouse!");
+
+var auto = false;
 var pause = true;
 var revealString = "32x^2 - 2476.667776x = -34283.41115 ";
 var revealed = [];
@@ -23,7 +26,7 @@ function drawLoop () {
 };
 var player = {
 	X: 50,
-	Y: 0,
+	Y: 10,
 	YVel: 0,
 	YmaxVel: 10,
 	Yaccel: 0.5,
@@ -59,9 +62,10 @@ var bodyRect = document.body.getBoundingClientRect(),
 document.addEventListener("mousemove", function (e) {
 	//console.log((e.clientX - elemRect.left) + " " + (e.clientY - elemRect.top));
 	player.Y = (e.clientY - elemRect.top);
-})
+});
 
 function reveal () {
+	var ok;
 	do {
 		var random = Math.round(Math.random() * (revealString.length - 1));
 		ok = revealed[random];
@@ -74,11 +78,15 @@ function gameLoop () {
 		ball.X += ball.XVel;
 		ball.Y += ball.YVel;
 		opponent.Y += opponent.YVel;
-		player.Y += player.YVel;
+		if (auto) {
+			player.Y += player.YVel;
+			//player.Y = ball.Y;
+		}
 		
 		//Clipping
 		if (player.Y < 0) {
 			player.Y = 0;
+			player.YVel = 0;
 		}
 		if (opponent.Y < 0) {
 			opponent.Y = 0;
@@ -86,6 +94,7 @@ function gameLoop () {
 		}
 		if (player.Y > 500) {
 			player.Y = 500;
+			player.YVel = 0;
 		}
 		if (opponent.Y > 500) {
 			opponent.Y = 500;
@@ -117,14 +126,18 @@ function gameLoop () {
 		if (((((ball.Y - ball.radius < player.Y + (player.height/2)) &&
 			(ball.Y + ball.radius > player.Y - (player.height/2))))) &&
 			((((ball.X - ball.radius < player.X + (player.width/2)) &&
-			(ball.X + ball.radius > player.X - (player.width/2)))))) {
+			(ball.X + ball.radius > player.X - (player.width/2)))))
+			) {
 			ball.XVel = 1.01 * Math.abs(ball.XVel);
+			if (!auto) {
+				reveal();
+			}
 		}
 		if (((((ball.Y - ball.radius < opponent.Y + (opponent.height/2)) &&
 			(ball.Y + ball.radius > opponent.Y - (opponent.height/2))))) &&
 			((((ball.X - ball.radius < opponent.X + (opponent.width/2)) &&
-			(ball.X + ball.radius > opponent.X - (opponent.width/2)))))) {
-				
+			(ball.X + ball.radius > opponent.X - (opponent.width/2)))))
+			) {
 			ball.XVel = -1.01 * Math.abs(ball.XVel);
 			reveal();
 		}
@@ -138,6 +151,15 @@ function gameLoop () {
 			opponent.YVel = Math.min(opponent.YmaxVel, opponent.YVel + opponent.Yaccel * Math.pow(Math.abs(opponent.Y - ball.Y) / 10, speedEdit));
 		} else {
 			opponent.YVel = opponent.YVel / 1.01;
+		}
+		if ((ball.Y + ball.radius) < (player.Y - (player.height / 2))) {
+			//move up (Y-)
+			player.YVel = Math.min(player.YmaxVel, player.YVel - player.Yaccel * Math.pow(Math.abs(player.Y - ball.Y) / 10, speedEdit));
+		} else if ((ball.Y - ball.radius) > (player.Y + (player.height / 2))) {
+			//move down (Y+)
+			player.YVel = Math.min(player.YmaxVel, player.YVel + player.Yaccel * Math.pow(Math.abs(player.Y - ball.Y) / 10, speedEdit));
+		} else {
+			player.YVel = player.YVel / 1.01;
 		}
 		
 		drawLoop();
