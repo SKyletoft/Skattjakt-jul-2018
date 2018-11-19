@@ -64,6 +64,11 @@ document.addEventListener("mousemove", function (e) {
 	player.Y = (e.clientY - elemRect.top);
 });
 
+document.addEventListener("touchmove", function (e) {
+	//console.log((e.clientX - elemRect.left) + " " + (e.clientY - elemRect.top));
+	player.Y = (e.clientY - elemRect.top);
+});
+
 function reveal () {
 	var ok;
 	do {
