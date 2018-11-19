@@ -64,9 +64,10 @@ document.addEventListener("mousemove", function (e) {
 	player.Y = (e.clientY - elemRect.top);
 });
 
-document.addEventListener("touchmove", function (e) {
+document.getElementById("touchcontrols").addEventListener("input", function (e) {
 	//console.log((e.clientX - elemRect.left) + " " + (e.clientY - elemRect.top));
-	player.Y = (e.clientY - elemRect.top);
+	//console.log("input!!!!");
+	player.Y = document.getElementById("touchcontrols").value;
 });
 
 function reveal () {
@@ -169,7 +170,7 @@ function gameLoop () {
 		
 		drawLoop();
 	} else {
-		document.getElementById("quickCSS").innerHTML="#theCanvas {display: none}";
+		document.getElementById("quickCSS").innerHTML="#theCanvas {display: none}#touchcontrols {display:none}";
 	}
 };
 
