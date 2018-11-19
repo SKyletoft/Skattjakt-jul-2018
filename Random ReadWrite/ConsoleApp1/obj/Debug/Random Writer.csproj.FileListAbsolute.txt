@@ -5,3 +5,10 @@ C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\bin
 C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\obj\Debug\Random Writer.exe
 C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\obj\Debug\Random Writer.pdb
 C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\ConsoleApp1\obj\Debug\Random Writer.csprojAssemblyReference.cache
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\ConsoleApp1\bin\Debug\Random Writer.exe.config
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\ConsoleApp1\bin\Debug\Random Writer.exe
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\ConsoleApp1\bin\Debug\Random Writer.pdb
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\ConsoleApp1\obj\Debug\Random Writer.csprojAssemblyReference.cache
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\ConsoleApp1\obj\Debug\Random Writer.csproj.CoreCompileInputs.cache
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\ConsoleApp1\obj\Debug\Random Writer.exe
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\ConsoleApp1\obj\Debug\Random Writer.pdb

@@ -1,5 +1,5 @@
 console.log("hi?");
-console.log("Please don't continue opening the dev console. You'll just ruin the fun. If you get stuck, email me for help rather than cheat, please?\n-Samuel");
+console.log("please don't continue opening the dev console. You'll just ruin the fun. If you get stuck, email me for help rather than cheat, please?");
 
 function go () {
 	var input = document.getElementById("textbox").value;
@@ -16,23 +16,13 @@ function go () {
 			break;
 		case "det börjar lätt":
 		case "det borjar latt":
-		case "detbörjarlätt":
-		case "detborjarlatt":
 			location="../WEB1OR/index.htm";
 			break;
-		case "it starts easy":
-		case "itstartseasy":
+		case "c":
 			location="../WEB1RU/index.htm";
 			break;
-		case "an easy start":
-		case "aneasystart":
+		case "d":
 			location="../WEB1ST/index.htm";
-			break;
-		case "morse code":
-		case "morsecode":
-		case "morsekod":
-		case "morse kod":
-			location="../WEB4/index.htm"
 			break;
 		default:
 			alert("Fel, tyvärr\nÄr du helt säker att du har skrivit rätt?");

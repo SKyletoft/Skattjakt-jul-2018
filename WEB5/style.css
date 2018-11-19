@@ -1,0 +1,10 @@
+.rules {
+	width: 500px;
+}
+.code {
+	text-align: left;
+	border: 1 px solid grey;
+	background: #DDDDDD;
+	font-family: "Courier New";
+	width: 500px;
+}

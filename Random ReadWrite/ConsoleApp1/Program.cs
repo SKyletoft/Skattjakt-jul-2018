@@ -37,17 +37,21 @@ namespace Random_Writer {
 					if (myLock.Length == limit) {
 						for (int i = 0; i < limit; i++) {
 							myKey += fromValidrange(rnd.Next());
+							if (myKey[i] != myLock[i]) {
+								break;
+							}
 						}
-						Console.WriteLine(seed + " " + myKey + " " + DateTime.Now);
+						//Console.WriteLine(seed + " " + myKey + " " + DateTime.Now);
 						seed++;
 					} else {
 						seed = myLock.Length * (int) Math.Pow(10, seed.ToString().Length);
-						Console.WriteLine("Skipping to next valid range... " + seed + " " + DateTime.Now);
+						//Console.WriteLine("Skipping to next valid range... " + seed + " " + DateTime.Now);
 						if (seed < 0) {
 							break;
 						}
 					}
 				}
+				Console.WriteLine(seed + " " + myKey + " " + DateTime.Now);
 				outputArray[j] = seed - 1;
 			}
 			Console.Title = "DONE";
