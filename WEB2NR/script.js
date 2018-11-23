@@ -1,5 +1,6 @@
 console.log("Hackerman!\nIf you got this far, you probably know how to look at the code, so I'll just tell you. There's a variable called auto. If you set it to true, the game will play itself for you. Might be helpful without a real mouse!");
 
+var lastTime = Date.now() - 500;
 var auto = false;
 var pause = true;
 var start = false;
@@ -62,6 +63,7 @@ var bodyRect = document.body.getBoundingClientRect(),
     offset   = elemRect.top - bodyRect.top;
 
 function reset() {
+	lastTime = Date.now();
 	start = false;
 	hasStarted = false;
 	document.getElementById("tutorialH2").innerHTML = "Move the mouse over the canvas or<br />place your finger on the slider to start";
@@ -105,13 +107,17 @@ document.addEventListener("mousemove", function (e) {
 
 document.getElementById("theCanvas").addEventListener("mousemove", function (e) {
 	//console.log((e.clientX - elemRect.left) + " " + (e.clientY - elemRect.top));
-	start = true;
+	if (Date.now() - lastTime > 1000) {
+		start = true;
+	}
 });
 
 document.getElementById("touchcontrols").addEventListener("input", function (e) {
 	//console.log((e.clientX - elemRect.left) + " " + (e.clientY - elemRect.top));
 	//console.log("input!!!!");
-	start = true;
+	if (Date.now() - lastTime > 1000) {
+		start = true;
+	}
 	player.Y = document.getElementById("touchcontrols").value;
 });
 
@@ -127,8 +133,16 @@ function reveal () {
 function gameLoop() {
 	if (start) {
 		if (!hasStarted) {
-			hasStarted = true;
-			document.getElementById("tutorialH2").innerHTML = "<br><br>";
+			if (Date.now() - lastTime > 1000) {
+				hasStarted = true;
+				document.getElementById("tutorialH2").innerHTML = "<br><br>";
+			} else {
+				//Can't happen anymore, I hope
+				//Keeping it anyway
+				console.log("TOO SOON!");
+				start = false;
+				reset();
+			}
 		}
 		if (pause) {
 			ball.X += ball.XVel;
