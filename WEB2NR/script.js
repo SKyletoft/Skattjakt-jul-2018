@@ -65,7 +65,7 @@ function reset() {
 	start = false;
 	hasStarted = false;
 	document.getElementById("tutorialH2").innerHTML = "Move the mouse over the canvas or<br />place your finger on the slider to start";
-	document.getElementById("equation").innerHTML = "loading...";
+	document.getElementById("equation").innerHTML = "Start again";
 	for (var i = 0; i < revealString.length; i++) { revealed[i] = false; }
 	player = {
 		X: 50,

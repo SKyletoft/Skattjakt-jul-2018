@@ -32,6 +32,7 @@ function go () {
 		case "morsecode":
 		case "morsekod":
 		case "morse kod":
+		case "morse":
 			location="../WEB4/index.htm"
 			break;
 		default:
