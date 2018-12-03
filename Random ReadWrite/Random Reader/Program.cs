@@ -27,6 +27,7 @@ namespace Random_Reader {
 				Console.WriteLine("Enter a number\nRelaunch the program and try again");
 				Console.ReadKey(true);
 			}
+			Console.ReadKey();
 		}
 		static char fromValidrange(int number) {
 			number %= 37;

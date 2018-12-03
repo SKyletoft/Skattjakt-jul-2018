@@ -5,3 +5,10 @@ C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\o
 C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\obj\Debug\Random Reader.csproj.CoreCompileInputs.cache
 C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\obj\Debug\Random Reader.exe
 C:\Users\skyle\Documents\Visual Studio 2017\Projects\ConsoleApp2\Random Reader\obj\Debug\Random Reader.pdb
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\Random Reader\bin\Debug\Random Reader.exe.config
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\Random Reader\bin\Debug\Random Reader.exe
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\Random Reader\bin\Debug\Random Reader.pdb
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\Random Reader\obj\Debug\Random Reader.csprojAssemblyReference.cache
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\Random Reader\obj\Debug\Random Reader.csproj.CoreCompileInputs.cache
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\Random Reader\obj\Debug\Random Reader.exe
+E:\Code\GIT\Skattjakt-jul-2018\Skattjakt-jul-2018\Random ReadWrite\Random Reader\obj\Debug\Random Reader.pdb

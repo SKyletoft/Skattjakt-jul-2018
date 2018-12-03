@@ -60,6 +60,9 @@ namespace Random_Writer {
 				Console.WriteLine(outputArray[i]);
 			}
 			Console.ReadKey();
+			Console.ReadKey();
+			Console.ReadKey();
+			Console.ReadKey();
 			return 0;
 		}
 		static char fromValidrange (int number) {
