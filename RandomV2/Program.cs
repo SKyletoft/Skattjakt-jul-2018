@@ -84,7 +84,7 @@ namespace EncoderWrite {
 				}
 				if (args[0] == "w") {
 					Console.WriteLine("Enter message:");
-					var input = Console.ReadLine();
+                    var input = Console.ReadLine();
 					var rnd = new Random();
 					for (var i = 0; i < input.Length; i++) {
 						var index = alphabet.IndexOf(input[i]);
@@ -93,7 +93,8 @@ namespace EncoderWrite {
 					Console.WriteLine();
 				} else if (args[0] == "r") {
 					Console.WriteLine("Enter message:");
-					var input = Console.ReadLine();
+					//var input = Console.ReadLine();
+                    var input = new System.IO.StreamReader("input.txt").ReadLine();
 					for (var i = 0; i < input.Length; i++) {
 						var searchInt = (int) input[i];
 						var searchString = input[i].ToString();
