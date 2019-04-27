@@ -3,3 +3,4 @@
 /home/skyletoft/Projects/RandomDotNet/EncoderWrite/obj/x86/Debug/EncoderWrite.csproj.CoreCompileInputs.cache
 /home/skyletoft/Projects/RandomDotNet/EncoderWrite/obj/x86/Debug/EncoderWrite.exe
 /home/skyletoft/Projects/RandomDotNet/EncoderWrite/obj/x86/Debug/EncoderWrite.pdb
+/home/skyletoft/Projects/RandomDotNet/EncoderWrite/obj/x86/Debug/EncoderWrite.csprojAssemblyReference.cache

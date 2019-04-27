@@ -11,13 +11,29 @@ namespace EncoderWrite {
 			}
 			return true;
 		}
+		public static int toNumber (string chars) {
+			if (chars.Length == 3) {
+				return (((int) chars[1]) << 8) + (int) chars[2];
+			}
+			return (int) chars[0];
+		}
+		public static string toString (int number) {
+			if (number > 0xFFFF) {
+				//Console.WriteLine("Long");
+				//Console.WriteLine(((number >> 16) << 8));
+				//Console.WriteLine((number & 0xFFFF));
+				return "#" + ((char) ((number >> 16) << 8)).ToString() + ((char) (number & 0xFFFF)).ToString();
+			}
+			//Console.WriteLine("Short");
+			return ((char) number).ToString();
+		}
 		public static void Main (string[] args) {
 			var alphabet = "";
 			var encoders = new List<List<int>> { };
 			if (args.Length > 0) {
 				if (args.Length == 2) {
 					if (args[1] == "auto") {
-						alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖabcdefghijklmnopqrstuvwxyzåäö.,- 1234567890";
+						alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖabcdefghijklmnopqrstuvwxyzåäö.,-! 1234567890";
 						//var encoders = new List<List<int>> { };
 						for (var i = 0; i < alphabet.Length; i++) {
 							encoders.Add(new List<int> { });
@@ -26,6 +42,10 @@ namespace EncoderWrite {
 						var fillRate = int.Parse(Console.ReadLine());
 						var seed = 0;
 						while (!minFilled(encoders, fillRate)) {
+							if (seed < 0) {
+								Console.WriteLine("Overflow error");
+								break;
+							}
 							var newChar = (char) new Random(seed).Next();
 							var index = alphabet.IndexOf(newChar);
 							if (index != -1) {
@@ -68,7 +88,7 @@ namespace EncoderWrite {
 					var rnd = new Random();
 					for (var i = 0; i < input.Length; i++) {
 						var index = alphabet.IndexOf(input[i]);
-						Console.Write((char) (encoders[index][rnd.Next() % encoders[index].Count]));
+						Console.Write(toString(encoders[index][rnd.Next() % encoders[index].Count]));
 					}
 					Console.WriteLine();
 				} else if (args[0] == "r") {
@@ -76,10 +96,16 @@ namespace EncoderWrite {
 					var input = Console.ReadLine();
 					for (var i = 0; i < input.Length; i++) {
 						var searchInt = (int) input[i];
+						var searchString = input[i].ToString();
 						var index = -1;
+						if (input[i] == '#') {
+							searchString = input.Substring(i, 3);
+							searchInt = toNumber(input.Substring(i, 3));
+							i += 2;
+						}
 						for (var j = 0; j < encoders.Count; j++) {
 							if (encoders[j].Contains(searchInt)) {
-								index = i;
+								index = j;
 								break;
 							}
 						}
@@ -89,6 +115,7 @@ namespace EncoderWrite {
 						}
 						Console.Write(alphabet[index]);
 					}
+					Console.WriteLine();
 				} else {
 					Console.WriteLine("Invalid arguments\nFirst argument [r/w] read/write\nSecond argument [auto/*] generate key or enter manual key");
 				}
